@@ -1,8 +1,8 @@
 version: "3.8"
 
 services:
-  fe-inline-edit-client:
-    container_name: inline-edit-client
+  fe-online-edit-client:
+    container_name: fe-online-edit-client
     build:
       context: .
       dockerfile: Dockerfile
