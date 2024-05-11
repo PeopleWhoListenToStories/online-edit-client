@@ -8,14 +8,14 @@ interface ThemeWrapperProps extends React.ComponentProps<'div'> {
 }
 
 export function ThemeWrapper({ defaultTheme, children, className }: ThemeWrapperProps) {
-  const { appConfig } = useAppStore();
+  const { appSetting } = useAppStore();
 
   return (
     <div
-      className={cn(`theme-${defaultTheme || appConfig.theme}`, 'w-full', className)}
+      className={cn(`theme-${defaultTheme || appSetting.theme}`, 'w-full', className)}
       style={
         {
-          '--radius': `${defaultTheme ? 0.5 : appConfig.radius}rem`,
+          '--radius': `${defaultTheme ? 0.5 : appSetting.radius}rem`,
         } as React.CSSProperties
       }
     >

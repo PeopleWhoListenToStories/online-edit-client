@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: React.PropsWithChildren) => (
-  <html lang="en" suppressHydrationWarning>
+  <html lang="en" suppressHydrationWarning={true}>
     <head />
     <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>

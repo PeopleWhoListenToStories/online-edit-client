@@ -7,7 +7,7 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 import { useAppStore } from '~/store/modules/app';
 
 export function ThemeSwitcher() {
-  const { appConfig } = useAppStore();
+  const { appSetting } = useAppStore();
   const segment = useSelectedLayoutSegment();
 
   React.useEffect(() => {
@@ -17,11 +17,11 @@ export function ThemeSwitcher() {
       }
     });
 
-    const theme = segment === 'themes' ? appConfig.theme : null;
+    const theme = segment === 'themes' ? appSetting.theme : null;
     if (theme) {
       return document.body.classList.add(`theme-${theme}`);
     }
-  }, [segment, appConfig.theme]);
+  }, [segment, appSetting.theme]);
 
   return null;
 }

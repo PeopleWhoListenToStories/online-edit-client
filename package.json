@@ -6,7 +6,7 @@
     "dev": "next dev -p 3000 -H 0.0.0.0",
     "dev:https": "next dev -p 3000 -H 0.0.0.0 --experimental-https",
     "build": "cross-env ANALYZE=true next build ",
-    "start": "next start -p 3000",
+    "start": "cross-env BASE_URL=https://online.leixu.live next start -p 3000",
     "lint": "eslint src --fix --ext .ts,.tsx,.js,.jsx --max-warnings 0"
   },
   "dependencies": {
@@ -15,9 +15,13 @@
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/themes": "^3.0.2",
+    "@rooks/use-raf": "^4.11.2",
     "@vercel/analytics": "^1.2.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dayjs": "^1.11.11",
+    "framer-motion": "^11.1.7",
     "idb-keyval": "^6.2.1",
     "immer": "^10.1.1",
     "lucide-react": "^0.376.0",
