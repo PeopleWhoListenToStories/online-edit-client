@@ -6,6 +6,8 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
+  trailingSlash: true,
   reactStrictMode: false,
   swcMinify: true,
   compiler: {
@@ -15,6 +17,7 @@ const nextConfig = {
     // additionalData: '@import "@/assets/styles/index.scss";',
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https', //图片资源的协议
